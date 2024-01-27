@@ -24,12 +24,12 @@ public class NumberCollection extends ArrayList<Number> implements Comparable<Nu
         }
 
         NumberCollection that = (NumberCollection) o;
-       return this.getAverage() == that.getAverage();
+        return Double.compare(this.getAverage(), that.getAverage()) == 0;
     }
 
     @Override
     public int hashCode() {
-        return super.hashCode();
+        return getAverage().hashCode();
     }
 
     private Double getAverage() {
